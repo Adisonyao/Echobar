@@ -1,46 +1,98 @@
-# EchoBar
+<p align="center">
+  <img src="../../EchoBar/Assets.xcassets/AppIcon.appiconset/icon-128.png" width="96" height="96" alt="Icona dell’app EchoBar">
+</p>
+
+<h1 align="center">🎙️ EchoBar</h1>
+
+<p align="center"><strong>Registra con un clic l’audio riprodotto dal tuo Mac.</strong><br>
+Non serve installare driver audio virtuali.</p>
+
+<p align="center"><strong>Circa 1,9 MB</strong> · App nativa in Swift · macOS 14.2+ · Open source con licenza MIT</p>
+
+<p align="center">
+  <a href="https://github.com/Adisonyao/EchoBar/releases"><strong>Scarica EchoBar</strong></a> ·
+  <a href="#install">Guida all’installazione</a> ·
+  <a href="#project-structure">Struttura del progetto</a>
+</p>
 
 [English](../../README.md) · [简体中文](README.zh-Hans.md) · [繁體中文](README.zh-Hant.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [العربية](README.ar.md) · [Français](README.fr.md) · [Русский](README.ru.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Português (Brasil)](README.pt-BR.md) · **Italiano** · [हिन्दी](README.hi.md)
 
-EchoBar è un registratore nativo e compatto per macOS. Registra l’audio riprodotto dalle app. Un clic avvia la registrazione, un secondo clic salva il WAV.
+<p align="center">
+  <img src="../assets/echoBar-hero.png" width="880" alt="Finestre di registrazione e impostazioni di EchoBar">
+</p>
 
-![Schermate reali delle finestre di registrazione e impostazioni di EchoBar, disposte in diagonale](../../docs/assets/echoBar-hero.png)
+## ✨ Caratteristiche principali
 
-## Funzionalità
+- **Nativa e leggera.** Sviluppata in Swift, acquisisce l’audio di sistema con Apple Core Audio. La build Release universale occupa circa 1,9 MB e non ha dipendenze di terze parti.
+- **Interfaccia essenziale.** Tutti i comandi sono in una piccola finestra. Puoi scegliere la cartella di destinazione e configurare il formato WAV.
+- **Le registrazioni vengono prima di tutto.** EchoBar scrive l’audio durante la registrazione e lo sincronizza periodicamente su disco. Alla chiusura normale, completa il salvataggio prima di uscire.
+- **Registrazione locale.** Acquisisce solo l’audio di sistema e non accede al microfono. Funziona offline e i file restano sul Mac.
 
-- **Cattura dell’audio di sistema.** EchoBar usa Core Audio di Apple per registrare la riproduzione delle app. L’audio resta udibile durante la registrazione e non serve il permesso per il microfono.
-- **Finestra compatta.** Lo spettro in tempo reale ha sette bande, con i bassi a sinistra e gli alti a destra. Dopo un’ora il timer mostra ore, minuti e secondi. Usa il pulsante rotondo o **⌘R**.
-- **Controllo della dimensione del file.** Il WAV PCM può seguire la sorgente o usare 16, 24, 32, 44,1 o 48 kHz, a 8, 16 o 24 bit. Le impostazioni stimano la dimensione per ora. Valori più bassi riducono la dimensione e la fedeltà.
-- **Preferenze persistenti.** Tieni la finestra in primo piano, apri la cartella nel Finder e modifica destinazione, formato e comportamento alla chiusura dalla stessa finestra. Le preferenze sono salvate in locale.
-- **Dati sul Mac.** Registrazioni, preferenze e dati di recupero restano sul dispositivo. EchoBar non include telemetria, funzioni di caricamento o dipendenze di terze parti.
-- **13 lingue.** Scegli la lingua nell’app o segui macOS. Le impostazioni in arabo si leggono da destra a sinistra.
-- **Riscontro immediato.** Le impostazioni scorrono nella stessa finestra. Dopo il salvataggio, fai clic sullo stato per mostrare il file nel Finder oppure attiva le notifiche di macOS.
+<a name="install"></a>
 
-[Schermata del registratore](../../docs/assets/recorder.png) · [Schermata delle impostazioni](../../docs/assets/settings.png)
+## 📥 Installazione
 
-## Avviare una registrazione
+1. Scarica EchoBar dalla sezione **Assets** dell’ultima versione su [GitHub Releases](https://github.com/Adisonyao/EchoBar/releases). Se scarichi un archivio, estrailo prima.
+2. Trascina `EchoBar.app` nella cartella **Applicazioni (Applications)**, quindi aprila.
 
-1. Compila e avvia EchoBar. Consenti la cattura dell’audio di sistema quando macOS lo chiede.
-2. Riproduci l’audio in un’altra app e premi il pulsante rosso. Premilo di nuovo per salvare. La cartella predefinita è `~/Music/回聲錄音/`.
-3. L’icona della cartella apre la destinazione e l’ingranaggio apre le impostazioni. Le modifiche di registrazione valgono dalla sessione successiva.
+**Requisiti di sistema** · macOS 14.2 o successivo, su Mac con chip Apple o processore Intel.
 
-## Recupero e compatibilità
+## ❓ Domande frequenti
 
-Durante l’uscita normale, EchoBar completa prima il salvataggio. Dopo un arresto anomalo o forzato, riapri l’app per recuperare l’audio già scritto sul disco. La parte ancora in memoria potrebbe andare persa.
+<details>
+<summary>Perché macOS chiede un’autorizzazione?</summary>
 
-Serve **macOS 14.2 o successivo** su un Mac Intel o Apple silicon compatibile. Liquid Glass è disponibile da macOS 26. Le versioni precedenti usano i materiali standard di sistema. La build comprende entrambe le architetture. L’esecuzione è stata verificata su Apple silicon.
+Alla prima registrazione, segui le indicazioni di macOS per consentire l’acquisizione dell’audio di sistema. In questo modo EchoBar può accedere all’audio riprodotto dal Mac.
 
-## Compilare dal sorgente
+</details>
 
-Apri [EchoBar.xcodeproj](../../EchoBar.xcodeproj) in Xcode con SDK macOS 26 o successivo. Seleziona **EchoBar** e **My Mac**, poi premi **⌘R**. Per una build Release universale:
+<details>
+<summary>Posso recuperare una registrazione dopo un arresto anomalo o un’uscita forzata?</summary>
+
+Quando riapri EchoBar, l’app tenta di recuperare l’audio già scritto su disco. L’audio ancora in memoria al momento dell’interruzione potrebbe andare perso.
+
+</details>
+
+<a name="project-structure"></a>
+
+## 📂 Struttura del progetto
+
+<details>
+<summary>Mostra la struttura del codice e della documentazione</summary>
+
+```text
+EchoBar/
+├── EchoBar.xcodeproj/             # Progetto Xcode e schema condiviso
+├── EchoBar/
+│   ├── EchoBarApp.swift           # Punto di ingresso, preferenze e stato della registrazione
+│   ├── RecorderView.swift         # Finestra di registrazione e impostazioni
+│   ├── SystemAudioRecorder.swift  # Acquisizione dell’audio di sistema e scrittura WAV
+│   ├── RecordingRecovery.swift    # Recupero delle registrazioni interrotte
+│   ├── AudioSpectrum.swift        # Spettro audio in tempo reale
+│   ├── Localizable.xcstrings     # Traduzioni dell’interfaccia
+│   └── Assets.xcassets/           # Icona e risorse dell’interfaccia
+├── docs/
+│   ├── assets/                    # Immagini del README
+│   └── readme/                    # README tradotti
+├── README.md                      # Pagina principale del progetto
+└── LICENSE                        # Licenza MIT
+```
+
+</details>
+
+## 🛠️ Compilazione dal codice sorgente
+
+Apri [EchoBar.xcodeproj](../../EchoBar.xcodeproj) in Xcode con l’**SDK di macOS 26 o successivo**. Seleziona **EchoBar** e **My Mac**, poi premi **⌘R**.
+
+Per una build Release universale, esegui il comando seguente dalla directory principale del repository.
 
 ```sh
 xcodebuild -project EchoBar.xcodeproj -scheme EchoBar -configuration Release \
   -destination 'generic/platform=macOS' -derivedDataPath DerivedData build
 ```
 
-L’app si trova in `DerivedData/Build/Products/Release/EchoBar.app`. Le build locali usano una firma ad hoc.
+L’app compilata si trova in `DerivedData/Build/Products/Release/EchoBar.app`.
 
-## Licenza
+## 📄 Licenza
 
-[MIT](../../LICENSE).
+[MIT](../../LICENSE)

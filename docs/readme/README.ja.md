@@ -1,46 +1,98 @@
-# EchoBar
+<p align="center">
+  <img src="../../EchoBar/Assets.xcassets/AppIcon.appiconset/icon-128.png" width="96" height="96" alt="EchoBar のアプリアイコン">
+</p>
+
+<h1 align="center">🎙️ EchoBar</h1>
+
+<p align="center"><strong>Mac で再生している音をワンクリックで録音。</strong><br>
+仮想オーディオドライバは不要です。</p>
+
+<p align="center"><strong>約 1.9 MB</strong> · Swift 製のネイティブアプリ · macOS 14.2+ · MIT ライセンスのオープンソース</p>
+
+<p align="center">
+  <a href="https://github.com/Adisonyao/EchoBar/releases"><strong>EchoBar をダウンロード</strong></a> ·
+  <a href="#install">インストール方法</a> ·
+  <a href="#project-structure">プロジェクト構成</a>
+</p>
 
 [English](../../README.md) · [简体中文](README.zh-Hans.md) · [繁體中文](README.zh-Hant.md) · **日本語** · [한국어](README.ko.md) · [العربية](README.ar.md) · [Français](README.fr.md) · [Русский](README.ru.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Português (Brasil)](README.pt-BR.md) · [Italiano](README.it.md) · [हिन्दी](README.hi.md)
 
-EchoBar は、アプリが再生する音を録音できる小さな macOS ネイティブアプリです。クリックで録音を開始し、もう一度クリックすると WAV で保存します。
+<p align="center">
+  <img src="../assets/echoBar-hero.png" width="880" alt="EchoBar の録音画面と設定画面">
+</p>
 
-![EchoBar の録音画面と設定画面を実際に撮影し、傾けて配置した画像](../../docs/assets/echoBar-hero.png)
+## ✨ 主な特長
 
-## 主な機能
+- **小さなネイティブアプリ。** Swift で開発し、Apple Core Audio でシステム音声を取り込みます。ユニバーサル版の Release ビルドは約 1.9 MB で、サードパーティ製の依存ライブラリはありません。
+- **シンプルな設計。** 操作は小さなウインドウひとつに集約。保存先や WAV 形式を変更できます。
+- **録音データの保護を優先。** 録音中はデータを継続して書き込み、定期的にディスクへ同期します。通常終了時は保存を終えてからアプリを終了します。
+- **ローカルで録音。** システム音声のみを取り込むため、マイクの許可は不要です。オフラインでも録音でき、ファイルは Mac に保存されます。
 
-- **システム音声を録音。** Apple の Core Audio でアプリの再生音を取得します。録音中も音は聞こえ、マイクへのアクセス許可は不要です。
-- **コンパクトな操作画面。** 7 バンドのリアルタイムスペクトルは左が低音、右が高音です。1 時間を超えると時・分・秒を表示します。録音ボタンまたは **⌘R** で操作できます。
-- **WAV の容量を調整。** 入力に合わせるか、16、24、32、44.1、48 kHz から選択できます。ビット深度は 8、16、24 bit です。設定画面に 1 時間あたりの目安を表示します。低い設定では容量と音質の両方が下がります。
-- **作業環境に合わせる。** ウインドウの最前面固定、Finder での保存先表示、同じウインドウでの保存先・形式・終了動作の設定が可能です。設定は次回起動時にも引き継がれます。
-- **Mac 内で完結。** 録音、設定、復旧情報は Mac に保存されます。テレメトリ、アップロード機能、サードパーティー依存はありません。
-- **13 言語。** アプリ内で言語を選べます。アラビア語の設定は右から左に並びます。
-- **操作結果が分かりやすい。** 設定画面は同じウインドウ内でスライドします。保存後にステータスをクリックすると Finder に表示でき、macOS の通知でも保存を確認できます。
+<a name="install"></a>
 
-[録音画面](../../docs/assets/recorder.png) · [設定画面](../../docs/assets/settings.png)
+## 📥 インストール
 
-## 録音を始める
+1. [GitHub Releases](https://github.com/Adisonyao/EchoBar/releases) の最新版の **Assets** から EchoBar をダウンロードします。圧縮ファイルの場合は先に展開してください。
+2. `EchoBar.app` を **アプリケーション（Applications）** フォルダへドラッグし、アプリを開きます。
 
-1. EchoBar をビルドして起動し、macOS の確認画面でシステム音声の録音を許可します。
-2. 別のアプリで音を再生し、赤いボタンを押します。もう一度押すと保存されます。既定の保存先は `~/Music/回聲錄音/` です。
-3. フォルダアイコンで保存先を開き、歯車アイコンで設定を変更できます。録音設定は次回から適用されます。
+**動作環境** · macOS 14.2 以降。Apple シリコンと Intel の Mac に対応。
 
-## 復旧と動作環境
+## ❓ よくある質問
 
-通常終了時は録音の保存を完了してから終了します。クラッシュや強制終了後は再起動すると、ディスクに書き込まれた音声を復旧できます。メモリに残っていた末尾の音声は失われることがあります。
+<details>
+<summary>macOS が許可を求めるのはなぜですか？</summary>
 
-対応する Intel または Apple シリコン搭載 Mac と **macOS 14.2 以降**が必要です。macOS 26 以降では Liquid Glass、それ以前では標準のシステムマテリアルを使用します。両アーキテクチャ向けにビルドされ、実機確認は Apple シリコンで行いました。
+初回の録音時に、macOS の案内に従ってシステム音声の取り込みを許可してください。この許可により、EchoBar は Mac で再生中の音声にアクセスできます。
 
-## ソースからビルド
+</details>
 
-macOS 26 SDK 以降を含む Xcode で [EchoBar.xcodeproj](../../EchoBar.xcodeproj) を開き、**EchoBar** スキームと **My Mac** を選択して **⌘R** を押します。ユニバーサル Release ビルド：
+<details>
+<summary>クラッシュや強制終了の後に録音を復元できますか？</summary>
+
+EchoBar を開き直すと、ディスクに書き込まれた音声の復元を試みます。中断時にメモリに残っていた音声は失われることがあります。
+
+</details>
+
+<a name="project-structure"></a>
+
+## 📂 プロジェクト構成
+
+<details>
+<summary>ソースコードとドキュメントの構成を表示</summary>
+
+```text
+EchoBar/
+├── EchoBar.xcodeproj/             # Xcode プロジェクトと共有スキーム
+├── EchoBar/
+│   ├── EchoBarApp.swift           # アプリの起点、設定、録音状態
+│   ├── RecorderView.swift         # 録音ウインドウと設定画面
+│   ├── SystemAudioRecorder.swift  # システム音声の取り込みと WAV 書き込み
+│   ├── RecordingRecovery.swift    # 中断後の録音データ復元
+│   ├── AudioSpectrum.swift        # リアルタイムの音声スペクトル
+│   ├── Localizable.xcstrings     # UI の翻訳
+│   └── Assets.xcassets/           # アプリアイコンと UI 素材
+├── docs/
+│   ├── assets/                    # README 用画像
+│   └── readme/                    # 各言語の README
+├── README.md                      # プロジェクトのトップページ
+└── LICENSE                        # MIT ライセンス
+```
+
+</details>
+
+## 🛠️ ソースからビルド
+
+**macOS 26 SDK 以降**を搭載した Xcode で [EchoBar.xcodeproj](../../EchoBar.xcodeproj) を開きます。**EchoBar** と **My Mac** を選び、**⌘R** を押します。
+
+ユニバーサル版の Release ビルドは、リポジトリのルートで次のコマンドを実行します。
 
 ```sh
 xcodebuild -project EchoBar.xcodeproj -scheme EchoBar -configuration Release \
   -destination 'generic/platform=macOS' -derivedDataPath DerivedData build
 ```
 
-成果物は `DerivedData/Build/Products/Release/EchoBar.app` に生成されます。ローカルビルドはアドホック署名を使います。
+ビルドしたアプリは `DerivedData/Build/Products/Release/EchoBar.app` にあります。
 
-## ライセンス
+## 📄 ライセンス
 
-[MIT](../../LICENSE)。
+[MIT](../../LICENSE)
