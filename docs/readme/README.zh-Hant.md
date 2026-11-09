@@ -1,46 +1,98 @@
-# EchoBar
+<p align="center">
+  <img src="../../EchoBar/Assets.xcassets/AppIcon.appiconset/icon-128.png" width="96" height="96" alt="EchoBar App 圖示">
+</p>
+
+<h1 align="center">🎙️ EchoBar · 回聲</h1>
+
+<p align="center"><strong>一鍵錄下 Mac 播放的聲音。</strong><br>
+免裝虛擬聲卡。</p>
+
+<p align="center"><strong>約 1.9 MB</strong> · Swift 原生開發 · macOS 14.2+ · MIT 開源</p>
+
+<p align="center">
+  <a href="https://github.com/Adisonyao/EchoBar/releases"><strong>下載 EchoBar</strong></a> ·
+  <a href="#安裝">安裝教學</a> ·
+  <a href="#專案結構">專案結構</a>
+</p>
 
 [English](../../README.md) · [简体中文](README.zh-Hans.md) · **繁體中文** · [日本語](README.ja.md) · [한국어](README.ko.md) · [العربية](README.ar.md) · [Français](README.fr.md) · [Русский](README.ru.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Português (Brasil)](README.pt-BR.md) · [Italiano](README.it.md) · [हिन्दी](README.hi.md)
 
-回聲是一款小巧的原生 macOS 錄音工具，用來錄製 App 播放的聲音。按一下開始，再按一下儲存成 WAV。
+<p align="center">
+  <img src="../assets/echoBar-hero.png" width="880" alt="EchoBar 的實機錄音與設定畫面">
+</p>
 
-![以真實介面截圖製作的傾斜構圖，展示錄音主視窗和設定頁](../../docs/assets/echoBar-hero.png)
+## ✨ 核心特色
 
-## 主要功能
+- **小巧原生。** 以 Swift 開發，使用 Apple Core Audio 擷取系統音訊。通用 Release 版 App 約 1.9 MB，無第三方依賴。
+- **極簡設計。** 所有操作集中在一個小視窗。儲存位置與 WAV 格式可依需要調整。
+- **優先保住錄音。** 錄音期間持續寫入並定期同步至磁碟。正常結束 App 前會完成存檔。
+- **本機錄音。** 只擷取系統音訊，無需麥克風權限。錄音可離線進行，檔案留在 Mac。
 
-- **錄製系統音訊。** 使用 Apple Core Audio 擷取 App 播放的聲音。錄音時仍可正常聽到聲音，無需麥克風權限。
-- **小視窗，操作直接。** 七段即時頻譜從左到右對應低頻到高頻。一小時後，計時器改用時、分、秒。按圓形錄音鍵或 **⌘R** 即可操作。
-- **自行控制檔案大小。** PCM WAV 可跟隨來源採樣率，或選 16、24、32、44.1、48 kHz，位元深度可選 8、16、24 bit。設定頁顯示每小時的預估大小。降低規格可以縮小檔案，也會犧牲部分音質。
-- **照自己的方式使用。** 可將視窗置頂於一般視窗上方，在 Finder 開啟錄音資料夾，並在同一視窗更改資料夾、格式及關窗行為。偏好保存在本機，重開後會恢復。
-- **資料留在本機。** 錄音、偏好和復原資訊都留在 Mac。沒有遙測、上傳功能或第三方依賴。
-- **13 種介面語言。** 可在 App 內切換或跟隨系統。阿拉伯文設定支援由右至左排列。
-- **操作有回饋。** 設定頁在同一視窗內滑動切換。儲存後可按狀態在 Finder 查看檔案，也可允許 macOS 通知接收儲存提示。
+<a name="安裝"></a>
 
-[錄音畫面截圖](../../docs/assets/recorder.png) · [設定頁截圖](../../docs/assets/settings.png)
+## 📥 安裝
 
-## 開始錄音
+1. 前往 [GitHub Releases](https://github.com/Adisonyao/EchoBar/releases)，從最新版的 **Assets** 下載 EchoBar。如下載的是壓縮檔，先解壓縮。
+2. 把 `EchoBar.app` 拖到 **應用程式（Applications）** 資料夾，再開啟即可使用。
 
-1. 建置並執行回聲，在 macOS 提示時允許系統音訊擷取。
-2. 在其他 App 播放聲音，按紅色錄音鍵開始，再按一次儲存。預設資料夾是 `~/Music/回聲錄音/`。
-3. 按資料夾圖示開啟儲存位置，按齒輪更改設定。錄音設定會在下次錄音生效。
+**系統需求** · macOS 14.2 或更新版本，支援 Apple 晶片與 Intel 架構。
 
-## 復原與相容性
+## ❓ 常見問題
 
-正常退出時，回聲會先儲存錄音。當機或強制結束後，重開 App 可復原已寫入磁碟的音訊。突然中斷時，還在記憶體中的尾端音訊可能遺失。
+<details>
+<summary>為什麼 macOS 會要求權限？</summary>
 
-需要 **macOS 14.2 或以上**及相容的 Intel 或 Apple 晶片 Mac。macOS 26 起使用原生 Liquid Glass，較早的版本使用標準系統材質。建置包含兩種架構，實際執行在 Apple 晶片 Mac 上驗證。
+首次錄音時，請依 macOS 提示允許擷取系統音訊。這項權限讓 EchoBar 讀取 Mac 上正在播放的聲音。
 
-## 從原始碼建置
+</details>
 
-使用內含 macOS 26 SDK 或更新版本的 Xcode 開啟 [EchoBar.xcodeproj](../../EchoBar.xcodeproj)，選 **EchoBar** scheme 和 **My Mac**，按 **⌘R**。通用 Release 建置：
+<details>
+<summary>當機或強制結束後，錄音還在嗎？</summary>
+
+重新開啟 EchoBar 時，App 會嘗試復原已寫入磁碟的音訊。中斷前仍在記憶體中的音訊可能遺失。
+
+</details>
+
+<a name="專案結構"></a>
+
+## 📂 專案結構
+
+<details>
+<summary>展開原始碼與文件目錄</summary>
+
+```text
+EchoBar/
+├── EchoBar.xcodeproj/             # Xcode 專案與共用 Scheme
+├── EchoBar/
+│   ├── EchoBarApp.swift           # App 入口、偏好與錄音狀態
+│   ├── RecorderView.swift         # 錄音視窗與設定介面
+│   ├── SystemAudioRecorder.swift  # 系統音訊擷取與 WAV 寫入
+│   ├── RecordingRecovery.swift    # 中斷後的錄音復原
+│   ├── AudioSpectrum.swift        # 即時音訊頻譜
+│   ├── Localizable.xcstrings     # 介面翻譯
+│   └── Assets.xcassets/           # App 圖示與介面資源
+├── docs/
+│   ├── assets/                    # README 配圖
+│   └── readme/                    # 各語言版本
+├── README.md                      # 專案首頁
+└── LICENSE                        # MIT 授權
+```
+
+</details>
+
+## 🛠️ 從原始碼建置
+
+使用內含 **macOS 26 SDK 或更新版本**的 Xcode 開啟 [EchoBar.xcodeproj](../../EchoBar.xcodeproj)，選擇 **EchoBar** 和 **My Mac**，按 **⌘R**。
+
+如需通用 Release 建置，在專案根目錄執行：
 
 ```sh
 xcodebuild -project EchoBar.xcodeproj -scheme EchoBar -configuration Release \
   -destination 'generic/platform=macOS' -derivedDataPath DerivedData build
 ```
 
-建置產物位於 `DerivedData/Build/Products/Release/EchoBar.app`，本機建置使用臨時簽署。
+建置完成的 App 位於 `DerivedData/Build/Products/Release/EchoBar.app`。
 
-## 授權
+## 📄 授權
 
-[MIT](../../LICENSE)。
+[MIT](../../LICENSE)
