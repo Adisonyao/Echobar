@@ -1,0 +1,43 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+		A00000000000000000000054 = { isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		A00000000000000000000058 = { isa = PBXBuildFile; fileRef = A00000000000000000000054; };
+		A00000000000000000000053 = { isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		A00000000000000000000057 = { isa = PBXBuildFile; fileRef = A00000000000000000000053; };
+		A00000000000000000000052 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingRecovery.swift; sourceTree = "<group>"; };
+		A00000000000000000000056 = { isa = PBXBuildFile; fileRef = A00000000000000000000052; };
+		A00000000000000000000051 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		A00000000000000000000055 = { isa = PBXBuildFile; fileRef = A00000000000000000000051; };
+		A0000000000000000000000A = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoBarApp.swift; sourceTree = "<group>"; };
+		A0000000000000000000000B = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderView.swift; sourceTree = "<group>"; };
+		A00000000000000000000010 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSpectrum.swift; sourceTree = "<group>"; };
+		A00000000000000000000018 = { isa = PBXBuildFile; fileRef = A00000000000000000000010; };
+		A0000000000000000000000C = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemAudioRecorder.swift; sourceTree = "<group>"; };
+		A0000000000000000000000D = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0000000000000000000000E = { isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0000000000000000000000F = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EchoBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00000000000000000000014 = { isa = PBXBuildFile; fileRef = A0000000000000000000000A; };
+		A00000000000000000000015 = { isa = PBXBuildFile; fileRef = A0000000000000000000000B; };
+		A00000000000000000000016 = { isa = PBXBuildFile; fileRef = A0000000000000000000000C; };
+		A00000000000000000000017 = { isa = PBXBuildFile; fileRef = A0000000000000000000000E; };
+		A0000000000000000000001E = { isa = PBXGroup; children = (A0000000000000000000001F, A00000000000000000000020,); sourceTree = "<group>"; };
+		A0000000000000000000001F = { isa = PBXGroup; children = (A0000000000000000000000A, A0000000000000000000000B, A0000000000000000000000C, A00000000000000000000010, A0000000000000000000000D, A00000000000000000000051, A00000000000000000000052, A00000000000000000000053, A00000000000000000000054, A0000000000000000000000E,); path = EchoBar; sourceTree = "<group>"; };
+		A00000000000000000000020 = { isa = PBXGroup; children = (A0000000000000000000000F,); name = Products; sourceTree = "<group>"; };
+		A00000000000000000000028 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000014, A00000000000000000000015, A00000000000000000000016, A00000000000000000000055, A00000000000000000000056, A00000000000000000000018,); runOnlyForDeploymentPostprocessing = 0; };
+		A00000000000000000000029 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		A0000000000000000000002A = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000057, A00000000000000000000058, A00000000000000000000017,); runOnlyForDeploymentPostprocessing = 0; };
+		A00000000000000000000032 = { isa = PBXNativeTarget; buildConfigurationList = A0000000000000000000003D; buildPhases = (A00000000000000000000028, A00000000000000000000029, A0000000000000000000002A,); buildRules = (); dependencies = (); name = EchoBar; productName = EchoBar; productReference = A0000000000000000000000F; productType = "com.apple.product-type.application"; };
+		A00000000000000000000033 = { isa = PBXProject; attributes = { BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 2720; LastUpgradeCheck = 2720; }; buildConfigurationList = A0000000000000000000003C; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, "zh-Hans", "zh-Hant", ja, ko, ar, fr, ru, es, de, "pt-BR", it, hi, Base,); mainGroup = A0000000000000000000001E; productRefGroup = A00000000000000000000020; projectDirPath = ""; projectRoot = ""; targets = (A00000000000000000000032,); };
+		A0000000000000000000003C = { isa = XCConfigurationList; buildConfigurations = (A00000000000000000000046, A00000000000000000000047,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A0000000000000000000003D = { isa = XCConfigurationList; buildConfigurations = (A00000000000000000000048, A00000000000000000000049,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A00000000000000000000046 = { isa = XCBuildConfiguration; buildSettings = { SDKROOT = macosx; MACOSX_DEPLOYMENT_TARGET = 14.2; CLANG_ENABLE_MODULES = YES; SWIFT_VERSION = 5.0; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_TESTABILITY = YES; }; name = Debug; };
+		A00000000000000000000047 = { isa = XCBuildConfiguration; buildSettings = { SDKROOT = macosx; MACOSX_DEPLOYMENT_TARGET = 14.2; CLANG_ENABLE_MODULES = YES; SWIFT_VERSION = 5.0; SWIFT_COMPILATION_MODE = wholemodule; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; DEPLOYMENT_POSTPROCESSING = YES; STRIP_INSTALLED_PRODUCT = YES; STRIP_STYLE = debugging; }; name = Release; };
+		A00000000000000000000048 = { isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_IDENTITY = "-"; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; ENABLE_HARDENED_RUNTIME = YES; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = EchoBar/Info.plist; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = local.echobar.recorder; PRODUCT_NAME = EchoBar; ENABLE_APP_SANDBOX = NO; }; name = Debug; };
+		A00000000000000000000049 = { isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_IDENTITY = "-"; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; ENABLE_HARDENED_RUNTIME = YES; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = EchoBar/Info.plist; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = local.echobar.recorder; PRODUCT_NAME = EchoBar; ENABLE_APP_SANDBOX = NO; }; name = Release; };
+	};
+	rootObject = A00000000000000000000033;
+}

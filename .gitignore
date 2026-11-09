@@ -1,0 +1,7 @@
+.DS_Store
+DerivedData/
+Build/
+xcuserdata/
+/EchoBar.xcodeproj/project.xcworkspace/
+*.xcuserstate
+/Promotional Assets/
