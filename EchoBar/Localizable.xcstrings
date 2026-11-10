@@ -2,6 +2,7 @@
   "sourceLanguage": "en",
   "strings": {
     "app": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -84,6 +85,7 @@
       }
     },
     "settings": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -166,6 +168,7 @@
       }
     },
     "back": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -248,6 +251,7 @@
       }
     },
     "pin": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -330,6 +334,7 @@
       }
     },
     "unpin": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -412,6 +417,7 @@
       }
     },
     "folder.open": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -494,6 +500,7 @@
       }
     },
     "folder.reveal": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -576,6 +583,7 @@
       }
     },
     "folder.label": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -658,6 +666,7 @@
       }
     },
     "folder.reset": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -740,6 +749,7 @@
       }
     },
     "folder.change": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -822,6 +832,7 @@
       }
     },
     "folder.choose": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -904,6 +915,7 @@
       }
     },
     "folder.prompt": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -986,6 +998,7 @@
       }
     },
     "folder.unwritable": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -1068,6 +1081,7 @@
       }
     },
     "language": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -1150,6 +1164,7 @@
       }
     },
     "system": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -1232,6 +1247,7 @@
       }
     },
     "format": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -1314,6 +1330,7 @@
       }
     },
     "rate": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -1396,6 +1413,7 @@
       }
     },
     "depth": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -1478,6 +1496,7 @@
       }
     },
     "source": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -1560,6 +1579,7 @@
       }
     },
     "size": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -1642,6 +1662,7 @@
       }
     },
     "size.source": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -1724,6 +1745,7 @@
       }
     },
     "size.stereo": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -1806,6 +1828,7 @@
       }
     },
     "window": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -1888,6 +1911,7 @@
       }
     },
     "quit": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -1970,6 +1994,7 @@
       }
     },
     "next": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -2052,6 +2077,7 @@
       }
     },
     "start": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -2134,6 +2160,7 @@
       }
     },
     "stop": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -2216,6 +2243,7 @@
       }
     },
     "ready": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -2298,6 +2326,7 @@
       }
     },
     "preparing": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -2380,6 +2409,7 @@
       }
     },
     "recording": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -2462,6 +2492,7 @@
       }
     },
     "saving": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -2544,6 +2575,7 @@
       }
     },
     "saved": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -2626,6 +2658,7 @@
       }
     },
     "partial": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -2708,6 +2741,7 @@
       }
     },
     "retry": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -2790,6 +2824,7 @@
       }
     },
     "ok": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -2872,6 +2907,7 @@
       }
     },
     "time": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -2954,6 +2990,7 @@
       }
     },
     "spectrum": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -3036,6 +3073,7 @@
       }
     },
     "error.audio": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -3118,6 +3156,7 @@
       }
     },
     "error.format": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -3200,6 +3239,7 @@
       }
     },
     "error.empty": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -3282,6 +3322,7 @@
       }
     },
     "error.save": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -3364,6 +3405,7 @@
       }
     },
     "recovered": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {

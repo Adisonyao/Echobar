@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="EchoBar/Assets.xcassets/AppIcon.appiconset/icon-128.png" width="96" height="96" alt="EchoBar app icon">
+  <img src="docs/assets/icon/echobar-icon-128.png" width="96" height="96" alt="EchoBar app icon">
 </p>
 
 <h1 align="center">🎙️ EchoBar</h1>
@@ -7,10 +7,10 @@
 <p align="center"><strong>Record the sound your Mac plays with one click.</strong><br>
 No virtual audio driver required.</p>
 
-<p align="center"><strong>About 1.9 MB</strong> · Built natively in Swift · macOS 14.2+ · Open source under MIT</p>
+<p align="center"><strong>About 2.8 MB</strong> · Built natively in Swift · macOS 14.2+ · Open source under MIT</p>
 
 <p align="center">
-  <a href="https://github.com/Adisonyao/EchoBar/releases"><strong>Download EchoBar</strong></a> ·
+  <a href="https://github.com/Adisonyao/EchoBar/releases/latest/download/EchoBar-macOS.zip"><strong>Download EchoBar</strong></a> ·
   <a href="#install">Installation</a> ·
   <a href="#project-structure">Project structure</a>
 </p>
@@ -23,7 +23,7 @@ No virtual audio driver required.</p>
 
 ## ✨ Highlights
 
-- **Small and native.** Built in Swift and powered by Apple Core Audio. The universal Release app is about 1.9 MB and has no third-party dependencies.
+- **Small and native.** Built in Swift and powered by Apple Core Audio. The universal Release app is about 2.8 MB and has no third-party dependencies.
 - **Simple by design.** Everything fits in one small window. Choose where to save recordings and adjust the WAV format.
 - **Built to preserve recordings.** EchoBar writes audio throughout the session and regularly syncs it to disk. It finishes saving before a normal quit.
 - **Local recording.** Captures system audio without microphone access. Recording works offline, and files stay on your Mac.
@@ -70,9 +70,10 @@ EchoBar/
 │   ├── RecordingRecovery.swift    # Recording recovery after interruptions
 │   ├── AudioSpectrum.swift        # Live audio spectrum
 │   ├── Localizable.xcstrings     # Interface translations
-│   └── Assets.xcassets/           # App icon and interface assets
+│   └── AppIcon.icon/              # App icon source (Icon Composer)
 ├── docs/
 │   ├── assets/                    # README images
+│   │   └── icon/echobar-icon-128.png
 │   └── readme/                    # Localized READMEs
 ├── README.md                      # Project homepage
 └── LICENSE                        # MIT license

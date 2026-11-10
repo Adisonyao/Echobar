@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../EchoBar/Assets.xcassets/AppIcon.appiconset/icon-128.png" width="96" height="96" alt="Значок приложения EchoBar">
+  <img src="../assets/icon/echobar-icon-128.png" width="96" height="96" alt="Значок приложения EchoBar">
 </p>
 
 <h1 align="center">🎙️ EchoBar</h1>
@@ -7,10 +7,10 @@
 <p align="center"><strong>Записывайте звук, который воспроизводит Mac, одним нажатием.</strong><br>
 Виртуальный аудиодрайвер не нужен.</p>
 
-<p align="center"><strong>Около 1,9 МБ</strong> · Нативное приложение на Swift · macOS 14.2+ · Открытый код под лицензией MIT</p>
+<p align="center"><strong>Около 2,8 МБ</strong> · Нативное приложение на Swift · macOS 14.2+ · Открытый код под лицензией MIT</p>
 
 <p align="center">
-  <a href="https://github.com/Adisonyao/EchoBar/releases"><strong>Скачать EchoBar</strong></a> ·
+  <a href="https://github.com/Adisonyao/EchoBar/releases/latest/download/EchoBar-macOS.zip"><strong>Скачать EchoBar</strong></a> ·
   <a href="#install">Инструкция по установке</a> ·
   <a href="#project-structure">Структура проекта</a>
 </p>
@@ -23,7 +23,7 @@
 
 ## ✨ Главное
 
-- **Компактное нативное приложение.** Написано на Swift и записывает системный звук через Apple Core Audio. Универсальная Release-сборка занимает около 1,9 МБ и не требует сторонних зависимостей.
+- **Компактное нативное приложение.** Написано на Swift и записывает системный звук через Apple Core Audio. Универсальная Release-сборка занимает около 2,8 МБ и не требует сторонних зависимостей.
 - **Простой интерфейс.** Все элементы управления находятся в одном небольшом окне. Можно выбрать папку для записей и настроить формат WAV.
 - **Сохранность записей.** Во время записи EchoBar непрерывно записывает аудиоданные и регулярно синхронизирует их с диском. При обычном выходе приложение сначала завершает сохранение.
 - **Локальная запись.** EchoBar записывает только системный звук и не требует доступа к микрофону. Запись работает без интернета, а файлы остаются на Mac.
@@ -70,9 +70,10 @@ EchoBar/
 │   ├── RecordingRecovery.swift    # Восстановление прерванных записей
 │   ├── AudioSpectrum.swift        # Спектр звука в реальном времени
 │   ├── Localizable.xcstrings     # Переводы интерфейса
-│   └── Assets.xcassets/           # Значок и ресурсы интерфейса
+│   └── AppIcon.icon/              # Значок приложения (Icon Composer)
 ├── docs/
 │   ├── assets/                    # Изображения для README
+│   │   └── icon/echobar-icon-128.png
 │   └── readme/                    # Переводы README
 ├── README.md                      # Главная страница проекта
 └── LICENSE                        # Лицензия MIT

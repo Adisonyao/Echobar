@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../EchoBar/Assets.xcassets/AppIcon.appiconset/icon-128.png" width="96" height="96" alt="EchoBar 应用图标">
+  <img src="../assets/icon/echobar-icon-128.png" width="96" height="96" alt="EchoBar 应用图标">
 </p>
 
 <h1 align="center">🎙️ EchoBar · 回声</h1>
@@ -7,10 +7,10 @@
 <p align="center"><strong>一键录下 Mac 播放的声音。</strong><br>
 免装虚拟声卡。</p>
 
-<p align="center"><strong>约 1.9 MB</strong> · 原生 Swift 开发 · macOS 14.2+ · MIT 开源</p>
+<p align="center"><strong>约 2.8 MB</strong> · 原生 Swift 开发 · macOS 14.2+ · MIT 开源</p>
 
 <p align="center">
-  <a href="https://github.com/Adisonyao/EchoBar/releases"><strong>下载 EchoBar</strong></a> ·
+  <a href="https://github.com/Adisonyao/EchoBar/releases/latest/download/EchoBar-macOS.zip"><strong>下载 EchoBar</strong></a> ·
   <a href="#install">安装教程</a> ·
   <a href="#project-structure">项目结构</a>
 </p>
@@ -23,7 +23,7 @@
 
 ## ✨ 核心特色
 
-- **小巧原生。** 使用 Swift 开发，通过 Apple Core Audio 捕获系统音频。通用 Release 版约 1.9 MB，无第三方依赖。
+- **小巧原生。** 使用 Swift 开发，通过 Apple Core Audio 捕获系统音频。通用 Release 版约 2.8 MB，无第三方依赖。
 - **极简设计。** 所有操作集中在一个小窗口。可按需调整保存位置和 WAV 格式。
 - **优先保住录音。** 录音过程中持续写入并定期同步到磁盘。正常退出应用前会完成保存。
 - **本地录音。** 只捕获系统音频，无需麦克风权限。录音可离线进行，文件保留在 Mac 上。
@@ -70,9 +70,10 @@ EchoBar/
 │   ├── RecordingRecovery.swift    # 中断后的录音恢复
 │   ├── AudioSpectrum.swift        # 实时音频频谱
 │   ├── Localizable.xcstrings     # 界面翻译
-│   └── Assets.xcassets/           # 应用图标与界面资源
+│   └── AppIcon.icon/              # 应用图标源文件（Icon Composer）
 ├── docs/
 │   ├── assets/                    # README 配图
+│   │   └── icon/echobar-icon-128.png
 │   └── readme/                    # 各语言版本
 ├── README.md                      # 项目首页
 └── LICENSE                        # MIT 许可证

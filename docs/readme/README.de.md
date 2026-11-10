@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../EchoBar/Assets.xcassets/AppIcon.appiconset/icon-128.png" width="96" height="96" alt="App-Symbol von EchoBar">
+  <img src="../assets/icon/echobar-icon-128.png" width="96" height="96" alt="App-Symbol von EchoBar">
 </p>
 
 <h1 align="center">🎙️ EchoBar</h1>
@@ -7,10 +7,10 @@
 <p align="center"><strong>Nimm mit einem Klick auf, was dein Mac abspielt.</strong><br>
 Kein virtueller Audiotreiber nötig.</p>
 
-<p align="center"><strong>Rund 1,9 MB</strong> · Native App in Swift · macOS 14.2+ · Open Source unter der MIT-Lizenz</p>
+<p align="center"><strong>Rund 2,8 MB</strong> · Native App in Swift · macOS 14.2+ · Open Source unter der MIT-Lizenz</p>
 
 <p align="center">
-  <a href="https://github.com/Adisonyao/EchoBar/releases"><strong>EchoBar herunterladen</strong></a> ·
+  <a href="https://github.com/Adisonyao/EchoBar/releases/latest/download/EchoBar-macOS.zip"><strong>EchoBar herunterladen</strong></a> ·
   <a href="#install">Installationsanleitung</a> ·
   <a href="#project-structure">Projektstruktur</a>
 </p>
@@ -23,7 +23,7 @@ Kein virtueller Audiotreiber nötig.</p>
 
 ## ✨ Auf einen Blick
 
-- **Klein und nativ.** EchoBar ist in Swift geschrieben und erfasst den Systemton über Apple Core Audio. Die universelle Release-Version ist rund 1,9 MB groß und kommt ohne Abhängigkeiten von Drittanbietern aus.
+- **Klein und nativ.** EchoBar ist in Swift geschrieben und erfasst den Systemton über Apple Core Audio. Die universelle Release-Version ist rund 2,8 MB groß und kommt ohne Abhängigkeiten von Drittanbietern aus.
 - **Übersichtliches Design.** Alle Bedienelemente passen in ein kleines Fenster. Speicherort und WAV-Format lassen sich anpassen.
 - **Aufnahmen sichern.** EchoBar schreibt die Audiodaten während der Aufnahme fortlaufend und synchronisiert sie regelmäßig mit dem Datenträger. Beim regulären Beenden schließt die App zuerst den Speichervorgang ab.
 - **Lokale Aufnahme.** EchoBar nimmt nur den Systemton auf und benötigt keinen Mikrofonzugriff. Die Aufnahme funktioniert offline und die Dateien bleiben auf deinem Mac.
@@ -70,9 +70,10 @@ EchoBar/
 │   ├── RecordingRecovery.swift    # Wiederherstellung unterbrochener Aufnahmen
 │   ├── AudioSpectrum.swift        # Live-Audiospektrum
 │   ├── Localizable.xcstrings     # Übersetzungen der Oberfläche
-│   └── Assets.xcassets/           # App-Symbol und UI-Ressourcen
+│   └── AppIcon.icon/              # App-Symbol (Icon Composer)
 ├── docs/
 │   ├── assets/                    # README-Bilder
+│   │   └── icon/echobar-icon-128.png
 │   └── readme/                    # README-Sprachversionen
 ├── README.md                      # Projektstartseite
 └── LICENSE                        # MIT-Lizenz

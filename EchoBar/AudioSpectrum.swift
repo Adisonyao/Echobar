@@ -118,7 +118,7 @@ final class SpectrumFFT {
         var window = [Float](repeating: 0, count: length)
         vDSP_hann_window(&window, vDSP_Length(length), Int32(vDSP_HANN_DENORM))
         self.window = window
-        real = [Float](repeating: 0, count: length)
+        real = [Float](repeating: 0, count: length / 2)
         imaginary = real
 
         let binWidth = sampleRate / Double(length)
@@ -139,15 +139,20 @@ final class SpectrumFFT {
 
     func measure(_ channels: [[Float]]) -> [Float] {
         var peakPower = AudioSpectrum.silence
-        let count = vDSP_Length(length)
+        let count = vDSP_Length(length / 2)
 
         for channel in channels {
-            vDSP_vmul(channel, 1, window, 1, &real, 1, count)
-            vDSP_vclr(&imaginary, 1, count)
+            channel.withUnsafeBufferPointer { samples in
+                window.withUnsafeBufferPointer { weights in
+                    // The real FFT takes even and odd samples in separate buffers.
+                    vDSP_vmul(samples.baseAddress!, 2, weights.baseAddress!, 2, &real, 1, count)
+                    vDSP_vmul(samples.baseAddress! + 1, 2, weights.baseAddress! + 1, 2, &imaginary, 1, count)
+                }
+            }
             real.withUnsafeMutableBufferPointer { real in
                 imaginary.withUnsafeMutableBufferPointer { imaginary in
                     var complex = DSPSplitComplex(realp: real.baseAddress!, imagp: imaginary.baseAddress!)
-                    vDSP_fft_zip(setup, &complex, 1, order, FFTDirection(FFT_FORWARD))
+                    vDSP_fft_zrip(setup, &complex, 1, order, FFTDirection(FFT_FORWARD))
                     for (index, bins) in bands.enumerated() {
                         for bin in bins {
                             let power = real[bin] * real[bin] + imaginary[bin] * imaginary[bin]
@@ -158,9 +163,9 @@ final class SpectrumFFT {
             }
         }
 
-        // The Hann window halves coherent gain. Use a fixed dBFS scale so louder
-        // playback raises the bars instead of rescaling every frame to its peak.
-        let gain = 4 / Float(length)
+        // The Hann window halves coherent gain and the real FFT doubles it.
+        // A fixed dBFS scale keeps the bars proportional to playback level.
+        let gain = 2 / Float(length)
         return peakPower.map { power in
             let decibels = 10 * log10(max(1e-12, power * gain * gain))
             return min(1, max(0, (decibels + 62) / 54))

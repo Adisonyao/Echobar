@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../EchoBar/Assets.xcassets/AppIcon.appiconset/icon-128.png" width="96" height="96" alt="EchoBar ऐप का आइकन">
+  <img src="../assets/icon/echobar-icon-128.png" width="96" height="96" alt="EchoBar ऐप का आइकन">
 </p>
 
 <h1 align="center">🎙️ EchoBar</h1>
@@ -7,10 +7,10 @@
 <p align="center"><strong>एक क्लिक में अपने Mac पर बज रही आवाज़ रिकॉर्ड करें।</strong><br>
 वर्चुअल ऑडियो ड्राइवर इंस्टॉल करने की ज़रूरत नहीं।</p>
 
-<p align="center"><strong>लगभग 1.9 MB</strong> · Swift में बना नेटिव ऐप · macOS 14.2+ · MIT लाइसेंस के तहत ओपन सोर्स</p>
+<p align="center"><strong>लगभग 2.8 MB</strong> · Swift में बना नेटिव ऐप · macOS 14.2+ · MIT लाइसेंस के तहत ओपन सोर्स</p>
 
 <p align="center">
-  <a href="https://github.com/Adisonyao/EchoBar/releases"><strong>EchoBar डाउनलोड करें</strong></a> ·
+  <a href="https://github.com/Adisonyao/EchoBar/releases/latest/download/EchoBar-macOS.zip"><strong>EchoBar डाउनलोड करें</strong></a> ·
   <a href="#install">इंस्टॉल करने का तरीका</a> ·
   <a href="#project-structure">प्रोजेक्ट की संरचना</a>
 </p>
@@ -23,7 +23,7 @@
 
 ## ✨ मुख्य खूबियाँ
 
-- **छोटा और नेटिव।** Swift में बना EchoBar, Apple Core Audio से सिस्टम ऑडियो कैप्चर करता है। यूनिवर्सल Release ऐप का आकार लगभग 1.9 MB है और इसे किसी थर्ड-पार्टी लाइब्रेरी की ज़रूरत नहीं है।
+- **छोटा और नेटिव।** Swift में बना EchoBar, Apple Core Audio से सिस्टम ऑडियो कैप्चर करता है। यूनिवर्सल Release ऐप का आकार लगभग 2.8 MB है और इसे किसी थर्ड-पार्टी लाइब्रेरी की ज़रूरत नहीं है।
 - **सरल डिज़ाइन।** सारे कंट्रोल एक छोटी विंडो में हैं। आप रिकॉर्डिंग का फ़ोल्डर और WAV फ़ॉर्मैट बदल सकते हैं।
 - **रिकॉर्डिंग सुरक्षित रखने को प्राथमिकता।** EchoBar रिकॉर्डिंग के दौरान ऑडियो फ़ाइल में लिखता रहता है और डेटा को नियमित रूप से डिस्क पर सिंक करता है। ऐप सामान्य तरीके से बंद करने पर पहले रिकॉर्डिंग सेव होती है।
 - **लोकल रिकॉर्डिंग।** ऐप केवल सिस्टम ऑडियो रिकॉर्ड करता है, इसलिए माइक्रोफ़ोन की अनुमति नहीं चाहिए। रिकॉर्डिंग ऑफ़लाइन भी होती है और फ़ाइलें आपके Mac पर रहती हैं।
@@ -70,9 +70,10 @@ EchoBar/
 │   ├── RecordingRecovery.swift    # रुकी हुई रिकॉर्डिंग की रिकवरी
 │   ├── AudioSpectrum.swift        # लाइव ऑडियो स्पेक्ट्रम
 │   ├── Localizable.xcstrings     # इंटरफ़ेस के अनुवाद
-│   └── Assets.xcassets/           # ऐप आइकन और इंटरफ़ेस की सामग्री
+│   └── AppIcon.icon/              # ऐप का आइकन (Icon Composer)
 ├── docs/
 │   ├── assets/                    # README की तस्वीरें
+│   │   └── icon/echobar-icon-128.png
 │   └── readme/                    # अलग-अलग भाषाओं में README
 ├── README.md                      # प्रोजेक्ट का होमपेज
 └── LICENSE                        # MIT लाइसेंस

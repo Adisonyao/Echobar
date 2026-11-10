@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../EchoBar/Assets.xcassets/AppIcon.appiconset/icon-128.png" width="96" height="96" alt="Icône de l’application EchoBar">
+  <img src="../assets/icon/echobar-icon-128.png" width="96" height="96" alt="Icône de l’application EchoBar">
 </p>
 
 <h1 align="center">🎙️ EchoBar</h1>
@@ -7,10 +7,10 @@
 <p align="center"><strong>Enregistrez en un clic le son diffusé par votre Mac.</strong><br>
 Aucun pilote audio virtuel à installer.</p>
 
-<p align="center"><strong>Environ 1,9 Mo</strong> · Application native en Swift · macOS 14.2+ · Code ouvert sous licence MIT</p>
+<p align="center"><strong>Environ 2,8 Mo</strong> · Application native en Swift · macOS 14.2+ · Code ouvert sous licence MIT</p>
 
 <p align="center">
-  <a href="https://github.com/Adisonyao/EchoBar/releases"><strong>Télécharger EchoBar</strong></a> ·
+  <a href="https://github.com/Adisonyao/EchoBar/releases/latest/download/EchoBar-macOS.zip"><strong>Télécharger EchoBar</strong></a> ·
   <a href="#install">Guide d’installation</a> ·
   <a href="#project-structure">Structure du projet</a>
 </p>
@@ -23,7 +23,7 @@ Aucun pilote audio virtuel à installer.</p>
 
 ## ✨ Points forts
 
-- **Une application native et légère.** Développée en Swift, elle capture le son du système via Apple Core Audio. La version Release universelle pèse environ 1,9 Mo et ne nécessite aucune dépendance tierce.
+- **Une application native et légère.** Développée en Swift, elle capture le son du système via Apple Core Audio. La version Release universelle pèse environ 2,8 Mo et ne nécessite aucune dépendance tierce.
 - **Une interface épurée.** Toutes les commandes tiennent dans une petite fenêtre. Vous pouvez choisir le dossier de destination et régler le format WAV.
 - **La priorité à vos enregistrements.** EchoBar écrit le son en continu et le synchronise régulièrement sur le disque. En cas de fermeture normale, l’enregistrement est sauvegardé avant de quitter.
 - **Enregistrement local.** Seul le son du système est capturé, sans accès au microphone. L’enregistrement fonctionne hors ligne et les fichiers restent sur votre Mac.
@@ -70,9 +70,10 @@ EchoBar/
 │   ├── RecordingRecovery.swift    # Récupération des enregistrements interrompus
 │   ├── AudioSpectrum.swift        # Spectre audio en temps réel
 │   ├── Localizable.xcstrings     # Traductions de l’interface
-│   └── Assets.xcassets/           # Icône et ressources de l’interface
+│   └── AppIcon.icon/              # Icône de l’application (Icon Composer)
 ├── docs/
 │   ├── assets/                    # Images du README
+│   │   └── icon/echobar-icon-128.png
 │   └── readme/                    # README traduits
 ├── README.md                      # Page d’accueil du projet
 └── LICENSE                        # Licence MIT

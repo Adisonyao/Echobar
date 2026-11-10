@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>EchoBar waveform</title>
+  <g fill="#9BE8D7">
+    <rect x="266" y="448" width="42" height="128" rx="21"/>
+    <rect x="341" y="396" width="42" height="232" rx="21"/>
+    <rect x="416" y="334" width="42" height="356" rx="21"/>
+    <rect x="566" y="334" width="42" height="356" rx="21"/>
+    <rect x="641" y="396" width="42" height="232" rx="21"/>
+    <rect x="716" y="448" width="42" height="128" rx="21"/>
+  </g>
+  <rect x="491" y="278" width="42" height="468" rx="21" fill="#FF7B81"/>
+</svg>

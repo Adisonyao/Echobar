@@ -1,7 +1,7 @@
 <div dir="rtl" lang="ar">
 
 <p align="center">
-  <img src="../../EchoBar/Assets.xcassets/AppIcon.appiconset/icon-128.png" width="96" height="96" alt="أيقونة تطبيق EchoBar">
+  <img src="../assets/icon/echobar-icon-128.png" width="96" height="96" alt="أيقونة تطبيق EchoBar">
 </p>
 
 <h1 align="center">🎙️ EchoBar</h1>
@@ -9,10 +9,10 @@
 <p align="center"><strong>سجّل بنقرة واحدة الصوت الذي يشغّله جهاز Mac.</strong><br>
 دون الحاجة إلى تثبيت برنامج تشغيل صوت افتراضي.</p>
 
-<p align="center"><strong>نحو 1.9 ميغابايت</strong> · تطبيق أصلي بلغة Swift · macOS 14.2+ · مفتوح المصدر بترخيص MIT</p>
+<p align="center"><strong>نحو 2.8 ميغابايت</strong> · تطبيق أصلي بلغة Swift · macOS 14.2+ · مفتوح المصدر بترخيص MIT</p>
 
 <p align="center">
-  <a href="https://github.com/Adisonyao/EchoBar/releases"><strong>تنزيل EchoBar</strong></a> ·
+  <a href="https://github.com/Adisonyao/EchoBar/releases/latest/download/EchoBar-macOS.zip"><strong>تنزيل EchoBar</strong></a> ·
   <a href="#install">دليل التثبيت</a> ·
   <a href="#project-structure">بنية المشروع</a>
 </p>
@@ -25,7 +25,7 @@
 
 ## ✨ أبرز المزايا
 
-- **تطبيق أصلي خفيف.** كُتب بلغة Swift ويستخدم Apple Core Audio لالتقاط صوت النظام. يبلغ حجم الإصدار العام لكلا المعماريتين نحو 1.9 ميغابايت ولا يعتمد على مكتبات خارجية.
+- **تطبيق أصلي خفيف.** كُتب بلغة Swift ويستخدم Apple Core Audio لالتقاط صوت النظام. يبلغ حجم الإصدار العام لكلا المعماريتين نحو 2.8 ميغابايت ولا يعتمد على مكتبات خارجية.
 - **تصميم بسيط.** جميع عناصر التحكم في نافذة صغيرة واحدة. يمكنك تغيير مكان الحفظ وإعدادات صيغة WAV.
 - **الأولوية لحفظ التسجيل.** يكتب EchoBar بيانات الصوت طوال مدة التسجيل ويزامنها مع القرص دوريًا. عند إنهاء التطبيق بالطريقة المعتادة، يُكمل الحفظ أولًا.
 - **تسجيل محلي.** يلتقط صوت النظام فقط ولا يحتاج إلى إذن الميكروفون. يعمل التسجيل دون اتصال بالإنترنت وتبقى الملفات على جهاز Mac.
@@ -72,9 +72,10 @@ EchoBar/
 │   ├── RecordingRecovery.swift    # استعادة التسجيل بعد الانقطاع
 │   ├── AudioSpectrum.swift        # طيف الصوت في الوقت الفعلي
 │   ├── Localizable.xcstrings     # ترجمات الواجهة
-│   └── Assets.xcassets/           # أيقونة التطبيق وموارد الواجهة
+│   └── AppIcon.icon/              # ملف أيقونة التطبيق (Icon Composer)
 ├── docs/
 │   ├── assets/                    # صور README
+│   │   └── icon/echobar-icon-128.png
 │   └── readme/                    # نسخ README باللغات المختلفة
 ├── README.md                      # الصفحة الرئيسية للمشروع
 └── LICENSE                        # ترخيص MIT

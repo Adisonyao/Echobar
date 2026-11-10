@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../EchoBar/Assets.xcassets/AppIcon.appiconset/icon-128.png" width="96" height="96" alt="Ícone do aplicativo EchoBar">
+  <img src="../assets/icon/echobar-icon-128.png" width="96" height="96" alt="Ícone do aplicativo EchoBar">
 </p>
 
 <h1 align="center">🎙️ EchoBar</h1>
@@ -7,10 +7,10 @@
 <p align="center"><strong>Grave com um clique o som que o Mac reproduz.</strong><br>
 Sem instalar drivers de áudio virtuais.</p>
 
-<p align="center"><strong>Cerca de 1,9 MB</strong> · App nativo em Swift · macOS 14.2+ · Código aberto sob a licença MIT</p>
+<p align="center"><strong>Cerca de 2,8 MB</strong> · App nativo em Swift · macOS 14.2+ · Código aberto sob a licença MIT</p>
 
 <p align="center">
-  <a href="https://github.com/Adisonyao/EchoBar/releases"><strong>Baixar EchoBar</strong></a> ·
+  <a href="https://github.com/Adisonyao/EchoBar/releases/latest/download/EchoBar-macOS.zip"><strong>Baixar EchoBar</strong></a> ·
   <a href="#install">Guia de instalação</a> ·
   <a href="#project-structure">Estrutura do projeto</a>
 </p>
@@ -23,7 +23,7 @@ Sem instalar drivers de áudio virtuais.</p>
 
 ## ✨ Destaques
 
-- **Nativo e leve.** Desenvolvido em Swift, o EchoBar captura o áudio do sistema com o Apple Core Audio. A versão Release universal ocupa cerca de 1,9 MB e não tem dependências de terceiros.
+- **Nativo e leve.** Desenvolvido em Swift, o EchoBar captura o áudio do sistema com o Apple Core Audio. A versão Release universal ocupa cerca de 2,8 MB e não tem dependências de terceiros.
 - **Interface simples.** Todos os controles ficam em uma janela pequena. Você pode escolher a pasta de destino e ajustar o formato WAV.
 - **Preservação das gravações.** O EchoBar grava os dados continuamente e os sincroniza com o disco em intervalos regulares. Ao encerrar o app normalmente, ele termina de salvar antes de fechar.
 - **Gravação local.** Captura apenas o áudio do sistema, sem acesso ao microfone. Funciona sem internet e os arquivos ficam no Mac.
@@ -70,9 +70,10 @@ EchoBar/
 │   ├── RecordingRecovery.swift    # Recuperação de gravações interrompidas
 │   ├── AudioSpectrum.swift        # Espectro de áudio em tempo real
 │   ├── Localizable.xcstrings     # Traduções da interface
-│   └── Assets.xcassets/           # Ícone e recursos da interface
+│   └── AppIcon.icon/              # Ícone do app (Icon Composer)
 ├── docs/
 │   ├── assets/                    # Imagens do README
+│   │   └── icon/echobar-icon-128.png
 │   └── readme/                    # READMEs traduzidos
 ├── README.md                      # Página inicial do projeto
 └── LICENSE                        # Licença MIT

@@ -92,9 +92,9 @@ struct RecorderView: View {
 
     private var recordingPane: some View {
         VStack(spacing: 0) {
-            TimelineView(.animation(minimumInterval: reduceMotion ? 0.12 : 1.0 / 30, paused: !model.isRecording)) { _ in
-                let time = timecode
-                VStack(spacing: 6) {
+            VStack(spacing: 6) {
+                TimelineView(.animation(minimumInterval: 1, paused: !model.isRecording)) { _ in
+                    let time = timecode
                     Text(time)
                         .font(.system(size: 35, weight: .medium, design: .monospaced))
                         .monospacedDigit()
@@ -104,6 +104,8 @@ struct RecorderView: View {
                         .padding(.horizontal, 12)
                         .foregroundStyle(.primary)
                         .accessibilityLabel(L10n.text("time", time))
+                }
+                TimelineView(.animation(minimumInterval: reduceMotion ? 0.12 : 1.0 / 30, paused: !model.isRecording)) { _ in
                     SpectrumBars(
                         levels: model.isRecording ? model.frequencyLevels : AudioSpectrum.silence,
                         active: model.isRecording,
